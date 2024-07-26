@@ -32,7 +32,7 @@
 #define LUA_INTEGER_FRMLEN ""
 
 #undef LUA_INTEGER_FMT
-#define LUA_INTEGER_FMT "%ld"
+#define LUA_INTEGER_FMT "%d"
 
 #undef LUA_NUMBER_FRMLEN
 #define LUA_NUMBER_FRMLEN ""
