@@ -795,7 +795,7 @@
 */
 
 
-
+#include "lua286.h"
 
 
 #endif
