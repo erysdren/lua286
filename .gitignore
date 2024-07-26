@@ -1,0 +1,7 @@
+untracked/
+*.o
+*.obj
+*.exe
+*.lib
+*.rsp
+*.err
