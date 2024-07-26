@@ -557,7 +557,9 @@ static lua_Unsigned project (lua_Unsigned ran, lua_Unsigned n,
     lim |= (lim >> 2);
     lim |= (lim >> 4);
     lim |= (lim >> 8);
-    lim |= (lim >> 16);
+#if (LUA_MAXUNSIGNED >> 15) >= 3
+    lim |= (lim >> 16);  /* integer type has more than 16 bits */
+#endif
 #if (LUA_MAXUNSIGNED >> 31) >= 3
     lim |= (lim >> 32);  /* integer type has more than 32 bits */
 #endif
