@@ -7,7 +7,7 @@ CC=wcc
 AR=wlib
 LD=wlink
 RM=rm
-CFLAGS=-omaxnet -2 -fp2 -mm
+CFLAGS=-omaxnet -2 -fp2 -mm -q
 
 LIBRARY_OBJECTS=&
 	lapi.o&
