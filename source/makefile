@@ -10,45 +10,45 @@ RM=rm
 CFLAGS=-omaxnet -2 -fp2 -mm -q
 
 LIBRARY_OBJECTS=&
-	lapi.o&
-	lcode.o&
-	lctype.o&
-	ldebug.o&
-	ldo.o&
-	ldump.o&
-	lfunc.o&
-	lgc.o&
-	llex.o&
-	lmem.o&
-	lobject.o&
-	lopcodes.o&
-	lparser.o&
-	lstate.o&
-	lstring.o&
-	ltable.o&
-	ltm.o&
-	lundump.o&
-	lvm.o&
-	lzio.o&
-	lauxlib.o&
-	lbaselib.o&
-	lcorolib.o&
-	ldblib.o&
-	liolib.o&
-	lmathlib.o&
-	loadlib.o&
-	loslib.o&
-	lstrlib.o&
-	ltablib.o&
-	lutf8lib.o&
-	linit.o
+	lapi.obj&
+	lcode.obj&
+	lctype.obj&
+	ldebug.obj&
+	ldo.obj&
+	ldump.obj&
+	lfunc.obj&
+	lgc.obj&
+	llex.obj&
+	lmem.obj&
+	lobject.obj&
+	lopcodes.obj&
+	lparser.obj&
+	lstate.obj&
+	lstring.obj&
+	ltable.obj&
+	ltm.obj&
+	lundump.obj&
+	lvm.obj&
+	lzio.obj&
+	lauxlib.obj&
+	lbaselib.obj&
+	lcorolib.obj&
+	ldblib.obj&
+	liolib.obj&
+	lmathlib.obj&
+	loadlib.obj&
+	loslib.obj&
+	lstrlib.obj&
+	ltablib.obj&
+	lutf8lib.obj&
+	linit.obj
 
-INTERPRETER_OBJECTS=lua.o
+INTERPRETER_OBJECTS=lua.obj
 
-COMPILER_OBJECTS=luac.o
+COMPILER_OBJECTS=luac.obj
 
-.c.o:
-	$(CC) $(CFLAGS) $*.c
+.c.obj:
+	$(CC) $(CFLAGS) -fo=$*.obj $*.c
 
 all: .SYMBOLIC $(LIBRARY) $(INTERPRETER) $(COMPILER)
 
